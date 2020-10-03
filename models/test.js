@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 const testSchema = mongoose.Schema({
     name: {
-        type: String
+        type: String,
+        require:true
     }
 
 })
 
-modeule.exports = mongoose.model('Test',testSchema)
+module.exports = mongoose.model('Test',testSchema)

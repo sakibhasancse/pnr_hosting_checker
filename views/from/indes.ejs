@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test api</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<style>
+    h2{
+        text-align: center;
+        padding-top:2rem
+    }
+    form{
+        padding-top: 2rem;
+        /* text-align: center; */
+
+    }
+
+</style>
+<body>
+    <div class="container">
+
+        <h2>Your Test Api Is Working </h2>
+        <form action="/add" class="from" method="post">
+            <div class="from-group" >
+                <label for="text">Name</label>
+            <input type="text" class="form-control" placeholder="Type Your Name" name="name" >
+            
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary "value="Add" >
+        </form>
+    </div>
+    <hr>
+    <div class="container">
+        <%if(test.length>0){%>
+        <h2>Names</h2>
+        <br>
+<div class="row row-cols-1 row-cols-md-3">
+
+<% for(tests of test){ %> 
+    <div class="col mb-4">
+        <div class="card h-100">
+          
+            <div class="card-body">
+                <h5 class="card-title"><%=tests.name%> </h5>
+             
+            </div>
+        </div>
+    </div>
+    <%}%>
+    
+</div>
+<% } %> 
+
+         
+    </div>
+    
+</body>
+</html>
